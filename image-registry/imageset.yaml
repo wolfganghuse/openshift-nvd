@@ -18,4 +18,10 @@ mirror:
       - name: stable
   additionalImages:
   - name: registry.redhat.io/ubi8/ubi:latest
-  helm: {}
+  helm:
+    repos:
+      - name: redhat-helm-charts
+        url: https://raw.githubusercontent.com/redhat-developer/redhat-helm-charts/master
+        charts:
+          - name: ibm-mongodb-enterprise-helm
+            version: 0.2.0
